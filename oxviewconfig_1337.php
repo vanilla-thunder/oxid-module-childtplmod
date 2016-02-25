@@ -28,16 +28,22 @@
 
 class oxviewconfig_1337 extends oxviewconfig_1337_parent
 {
-    public function getModuleTpl($sModule, $sFile)
+    public function getModulePath($sModule, $sFile = '')
     {
-        if (!$sFile || ($sFile[0] != '/')) {
-            $sFile = '/' . $sFile;
+        if($sFile == '' || pathinfo($sFile, PATHINFO_EXTENSION) != 'tpl')
+        {
+            return parent::getModulePath($sModule, $sFile);
         }
+        if ($sFile[0] != '/') $sFile = '/' . $sFile;
+
+        $debug = true;
+
         $oModule = oxNew("oxmodule");
         $sModulePath = $oModule->getModulePath($sModule);
 
         $sTpl = $this->getConfig()->getTemplateDir() . 'modules/' . $sModulePath . $sFile;
         $sFallback = $this->getConfig()->getModulesDir() . $sModulePath . $sFile;
+        if($debug) oxRegistry::getUtils()->writeToLog("$sModule requested template:\n          $sTpl \n          $sFallback\n\n","module-templates.log");
 
         if (file_exists($sTpl)) return $sTpl;
         elseif (file_exists($sFallback)) return $sFallback;
