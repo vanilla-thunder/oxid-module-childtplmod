@@ -1,6 +1,6 @@
 <?php
 /**
- * vt dev utilities - core
+ * simple override handling for module tempaltes
  * The MIT License (MIT)
  *
  * Copyright (C) 2016  Marat Bedoev

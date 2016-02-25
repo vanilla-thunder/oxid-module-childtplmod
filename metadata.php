@@ -1,6 +1,6 @@
 <?php
 /**
- * vt dev utilities - core
+ * simple override handling for module tempaltes
  * The MIT License (MIT)
  *
  * Copyright (C) 2016  Marat Bedoev
@@ -29,8 +29,8 @@
 $sMetadataVersion = '1.1';
 $aModule = array(
     'id'          => '1337',
-    'title'       => '1337 module',
-    'description' => 'demo module for pull request #xx: simple override system for module tempaltes',
+    'title'       => 'simple override handling for module tempaltes',
+    'description' => '<iframe width="600" height="450" src="https://www.youtube.com/embed/DLzxrzFCyOs?autoplay=1" frameborder="0" allowfullscreen></iframe>',
     'thumbnail'   => 'oxid-vt.jpg',
     'version'     => '0.0.1',
     'author'      => 'Marat Bedoev',
