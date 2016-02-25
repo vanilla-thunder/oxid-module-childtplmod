@@ -43,10 +43,14 @@ class oxviewconfig_1337 extends oxviewconfig_1337_parent
 
         $sTpl = $this->getConfig()->getTemplateDir() . 'modules/' . $sModulePath . $sFile;
         $sFallback = $this->getConfig()->getModulesDir() . $sModulePath . $sFile;
-        if($debug) oxRegistry::getUtils()->writeToLog("$sModule requested template:\n          $sTpl \n          $sFallback\n\n","module-templates.log");
+
 
         if (file_exists($sTpl)) return $sTpl;
-        elseif (file_exists($sFallback)) return $sFallback;
+        elseif (file_exists($sFallback))
+        {
+            if($debug) oxRegistry::getUtils()->writeToLog("$sModule template can be overridden:\n          $sTpl \n          $sFallback\n\n","module-templates.log");
+            return $sFallback;
+        }
         else {
             /** @var oxFileException $oEx */
             $oEx = oxNew("oxFileException", "Requested file not found for module $sModule ($sFile)");
