@@ -28,15 +28,15 @@
 
 $sMetadataVersion = '1.1';
 $aModule = array(
-    'id'          => '1337',
+    'id'          => 'vt-1337',
     'title'       => 'simple override handling for module tempaltes',
     'description' => '<iframe width="600" height="450" src="https://www.youtube.com/embed/DLzxrzFCyOs?autoplay=1" frameborder="0" allowfullscreen></iframe>',
     'thumbnail'   => 'oxid-vt.jpg',
     'version'     => '0.0.1',
     'author'      => 'Marat Bedoev',
     'email'       => 'm@marat.ws',
-    'url'         => 'https://github.com/vanilla-thunder/1337',
+    'url'         => 'https://github.com/vanilla-thunder/vt-1337',
     'extend'      => array(
-        'oxviewconfig' => '1337/oxviewconfig_1337'
+        'oxviewconfig' => 'vt-1337/oxviewconfig_1337'
     )
 );
