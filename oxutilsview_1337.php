@@ -26,23 +26,29 @@
  * Author:     Marat Bedoev <m@marat.ws>
  */
 
-$sMetadataVersion = '1.1';
-$aModule = [
-    'id'          => 'vt-1337',
-    'title'       => '[vt] 1337 - override handling for module templates',
-    'description' => '<iframe width="600" height="450" src="https://www.youtube.com/embed/DLzxrzFCyOs?autoplay=1" frameborder="0" allowfullscreen></iframe>',
-    'thumbnail'   => 'oxid-vt.jpg',
-    'version'     => '0.0.2',
-    'author'      => 'Marat Bedoev',
-    'email'       => 'm@marat.ws',
-    'url'         => 'https://github.com/vanilla-thunder/vt-1337',
-    'extend'      => [
-        'oxutilsview' => 'vt-1337/oxutilsview_1337',
-        'oxviewconfig' => 'vt-1337/oxviewconfig_1337'
-    ],
-    'settings' => [
-        ['group' => 'vt1337', 'name' => 'blVt1337logReplaced', 'type' => 'bool',  'value' => false],
-        ['group' => 'vt1337', 'name' => 'blVt1337logRepleacable', 'type' => 'bool',  'value' => true]
+class oxutilsview_1337 extends oxutilsview_1337_parent
+{
+    protected function _getTemplateBlock($sModule, $sFile)
+    {
+        $cfg = oxRegistry::getConfig();
+        $debugReplaced = $cfg->getConfigParam("blVt1337logReplaced");
+        $debugReplaceable = $cfg->getConfigParam("blVt1337logRepleacable");
+
+        $aModuleInfo = $this->_getActiveModuleInfo();
+        $sModulePath = $aModuleInfo[$sModule];
+
+        $sTpl = $this->getConfig()->getTemplateDir() . "modules/{$sModulePath}/{$sFile}";
+
+        if($debug) oxRegistry::getUtils()->writeToLog("$sModule template $sFile can be overridden:\n          $sTpl\n\n","vt-1337.log");
+
+        if (file_exists($sTpl)) 
+        {
+           if($debugReplaced) oxRegistry::getUtils()->writeToLog("[replaced]    $sFile => $sTpl\n","vt-1337.log");
+           return file_get_contents($sTpl);
+        }
        
-    ]
-];
+        if($debugReplaceable) oxRegistry::getUtils()->writeToLog("[replaceable] $sFile => $sTpl\n","vt-1337.log");
+        return parent::_getTemplateBlock($sModule, $sFile);
+    }
+
+}
