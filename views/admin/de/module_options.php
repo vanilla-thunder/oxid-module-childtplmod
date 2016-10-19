@@ -4,6 +4,6 @@ $style = '<style type="text/css">.groupExp a.rc b {font-size: medium; color: #ff
 $aLang = [
     'charset'                               => 'UTF-8',
     'SHOP_MODULE_GROUP_vt1337' => $style.'Einstellungen',
-    'SHOP_MODULE_blVt1337logReplaced'      => 'log overridden templates',
-    'SHOP_MODULE_blVt1337logRepleacable'      => 'log templates, that could be overridden'
+    'SHOP_MODULE_blVt1337logReplaced'      => 'log overriden templates',
+    'SHOP_MODULE_blVt1337logRepleacable'      => 'log templates, that could be overriden'
 ];
