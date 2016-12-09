@@ -1,0 +1,25 @@
+{
+  "name": "vt-childtplmod",
+  "version": "0.1.0",
+  "description": "child theme implementation for module templates",
+  "author": "Marat Bedoev",
+  "company": "",
+  "email": "m@marat.ws",
+  "url" : "https://github.com/vanilla-thunder/vt-childtplmod",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vanilla-thunder/vt-childtplmod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vanilla-thunder/vt-childtplmod/issues"
+  },
+  "keywords": [
+    "oxid",
+    "module templates",
+    "tempalte override"
+  ],
+  "dependencies": {
+    "replace": "*"
+  }
+}
