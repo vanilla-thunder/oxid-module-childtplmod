@@ -37,8 +37,8 @@ $aModule = [
     'email'       => 'm@marat.ws',
     'url'         => 'https://github.com/vanilla-thunder/vt-1337',
     'extend'      => [
-        'oxutilsview' => 'vt-1337/oxutilsview_1337',
-        'oxviewconfig' => 'vt-1337/oxviewconfig_1337'
+        'oxutilsview' => 'vt/vt-1337/oxutilsview_1337',
+        'oxviewconfig' => 'vt/vt-1337/oxviewconfig_1337'
     ],
     'settings' => [
         ['group' => 'vt1337', 'name' => 'blVt1337logReplaced', 'type' => 'bool',  'value' => false],
