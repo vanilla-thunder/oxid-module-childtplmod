@@ -22,17 +22,17 @@ $aModule = [
     'title'       => '[vt] child theme for module templates',
     'description' => 'child themes can now override module tempaltes and blocks. No need to change module tempaltes and care about updates anymore!',
     'thumbnail'   => 'oxid-vt.jpg',
-    'version'     => '###_VERSION_###',
-    'author'      => '###_AUTHOR_###, ###_COMPANY_###',
-    'email'       => '###_EMAIL_###',
-    'url'         => 'https://github.com/vanilla-thunder/vt-childtplmod',
+    'version'     => '___VERSION___',
+    'author'      => '___AUTHOR___, ___COMPANY___',
+    'email'       => '___EMAIL___',
+    'url'         => '___URL___',
     'extend'      => [
         'oxutilsview' => 'vt/vt-childtplmod/extend/oxutilsview_childtplmod',
         'oxviewconfig' => 'vt/vt-childtplmod/extend/oxviewconfig_childtplmod'
     ],
     'settings' => [
-        ['group' => 'vtchildtplmod', 'name' => 'blVtchildtplmodLogReplaced', 'type' => 'bool',  'value' => false],
-        ['group' => 'vtchildtplmod', 'name' => 'blVtchildtplmodLogRepleacable', 'type' => 'bool',  'value' => true]
+        ['group' => 'vtchildtplmod', 'name' => 'blVtctpmLogReplaced', 'type' => 'bool',  'value' => false],
+        ['group' => 'vtchildtplmod', 'name' => 'blVtctpmLogReplaceable', 'type' => 'bool',  'value' => true]
        
     ]
 ];
