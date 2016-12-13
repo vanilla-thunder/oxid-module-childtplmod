@@ -16,13 +16,12 @@ var shell = function (command) {
 // cleanup
 shell("rm -rf _module/application");
 shell("rm -rf _module/extend");
-shell("rm -rf _master/copy_this/modules/vt-childtplmod/*");
+shell("rm -rf _master/copy_this/modules/vt/vt-childtplmod");
 console.log("");
 console.log("     cleanup finished");
 
 // oxversion
-//r('http://mb-dev.de/v/?raw=1&v=' + p.version).pipe(fs.createWriteStream('_module/version.jpg'));
-shell('wget http://mb-dev.de/v/?raw=1&v=' + p.version + ' _module/version.jpg');
+//shell('wget -O _module/version.jpg http://mb-dev.de/v/?raw=1&v=' + p.version);
 
 // copy files
 shell("cp -r application _module/");
@@ -57,8 +56,8 @@ for(var x in replaces)
 process.on('exit', function (code) {
     console.log("     replacing complete");
     // copy module to master
-    shell("cp -r _module _master/copy_this/modules/vt-childtplmod");
-    shell("rm -rf _master/copy_this/modules/vt-childtplmod/.git");
+    shell("cp -rf _module _master/copy_this/modules/vt/vt-childtplmod");
+    shell("rm -rf _master/copy_this/modules/vt/vt-childtplmod/.git");
     shell("cp _module/README.md _master/README.md");
     console.log("");
     console.log("     build complete! made my day!");
