@@ -1,9 +1,9 @@
 <?php
 
 /*
- * ###_COMPANY_### - ###_MODULE_###
- * Copyright (C) ###_YEAR_###  ###_COMPANY_###
- * info:  ###_EMAIL_###
+ *  - child theme implementation for module templates
+ * Copyright (C) 2016  
+ * info:  m@marat.ws
  *
  * GNU GENERAL PUBLIC LICENSE  
  *
