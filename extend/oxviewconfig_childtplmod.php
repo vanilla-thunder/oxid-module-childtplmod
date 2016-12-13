@@ -1,8 +1,8 @@
 <?php
 
 /*
- *  - child theme implementation for module templates
- * Copyright (C) 2016  
+ * child theme implementation for module templates
+ * Copyright (C) 2016  Marat Bedoev
  * info:  m@marat.ws
  *
  * GNU GENERAL PUBLIC LICENSE  
