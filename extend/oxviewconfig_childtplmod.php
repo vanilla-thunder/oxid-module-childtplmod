@@ -1,9 +1,9 @@
 <?php
 
 /*
- *  - child theme implementation for module templates
- * Copyright (C) 2016  
- * info:  m@marat.ws
+ * ###_COMPANY_### - ###_MODULE_###
+ * Copyright (C) ###_YEAR_###  ###_COMPANY_###
+ * info:  ###_EMAIL_###
  *
  * GNU GENERAL PUBLIC LICENSE  
  *
