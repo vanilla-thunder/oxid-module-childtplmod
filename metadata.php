@@ -1,48 +1,38 @@
 <?php
-/**
- * simple override handling for module tempaltes
- * The MIT License (MIT)
+
+/*
+ *  - child theme implementation for module templates
+ * Copyright (C) 2016  
+ * info:  m@marat.ws
  *
- * Copyright (C) 2016  Marat Bedoev
+ * GNU GENERAL PUBLIC LICENSE  
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
+ * This program is free software;
+ * you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation;
+ * either version 3 of the License, or (at your option) any later version.
  *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- * Author:     Marat Bedoev <m@marat.ws>
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ *  without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
  */
 
 $sMetadataVersion = '1.1';
 $aModule = [
-    'id'          => 'vt-1337',
-    'title'       => '[vt] 1337 - override handling for module templates',
-    'description' => '<iframe width="600" height="450" src="https://www.youtube.com/embed/DLzxrzFCyOs?autoplay=1" frameborder="0" allowfullscreen></iframe>',
+    'id'          => 'vt-childtplmod',
+    'title'       => '[vt] child theme for module templates',
+    'description' => 'child themes can now override module tempaltes and blocks. No need to change module tempaltes and care about updates anymore!',
     'thumbnail'   => 'oxid-vt.jpg',
-    'version'     => '0.0.2',
-    'author'      => 'Marat Bedoev',
-    'email'       => 'm@marat.ws',
-    'url'         => 'https://github.com/vanilla-thunder/vt-1337',
+    'version'     => '___VERSION___',
+    'author'      => '___AUTHOR___, ___COMPANY___',
+    'email'       => '___EMAIL___',
+    'url'         => '___URL___',
     'extend'      => [
-        'oxutilsview' => 'vt/vt-1337/oxutilsview_1337',
-        'oxviewconfig' => 'vt/vt-1337/oxviewconfig_1337'
+        'oxutilsview' => 'vt/vt-childtplmod/extend/oxutilsview_childtplmod',
+        'oxviewconfig' => 'vt/vt-childtplmod/extend/oxviewconfig_childtplmod'
     ],
     'settings' => [
-        ['group' => 'vt1337', 'name' => 'blVt1337logReplaced', 'type' => 'bool',  'value' => false],
-        ['group' => 'vt1337', 'name' => 'blVt1337logRepleacable', 'type' => 'bool',  'value' => true]
+        ['group' => 'vtchildtplmod', 'name' => 'blVtctpmLogReplaced', 'type' => 'bool',  'value' => false],
+        ['group' => 'vtchildtplmod', 'name' => 'blVtctpmLogReplaceable', 'type' => 'bool',  'value' => true]
        
     ]
 ];
