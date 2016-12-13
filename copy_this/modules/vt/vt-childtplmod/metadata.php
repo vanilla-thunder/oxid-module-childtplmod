@@ -1,9 +1,9 @@
 <?php
 
 /*
- *  - child theme implementation for module templates
- * Copyright (C) 2016  
- * info:  m@marat.ws
+ * ###_COMPANY_### - ###_MODULE_###
+ * Copyright (C) ###_YEAR_###  ###_COMPANY_###
+ * info:  ###_EMAIL_###
  *
  * GNU GENERAL PUBLIC LICENSE  
  *
@@ -22,10 +22,10 @@ $aModule = [
     'title'       => '[vt] child theme for module templates',
     'description' => 'child themes can now override module tempaltes and blocks. No need to change module tempaltes and care about updates anymore!',
     'thumbnail'   => 'oxid-vt.jpg',
-    'version'     => '___VERSION___',
-    'author'      => '___AUTHOR___, ___COMPANY___',
-    'email'       => '___EMAIL___',
-    'url'         => '___URL___',
+    'version'     => '0.1.0',
+    'author'      => 'Marat Bedoev, ',
+    'email'       => 'm@marat.ws',
+    'url'         => 'https://github.com/vanilla-thunder/vt-childtplmod',
     'extend'      => [
         'oxutilsview' => 'vt/vt-childtplmod/extend/oxutilsview_childtplmod',
         'oxviewconfig' => 'vt/vt-childtplmod/extend/oxviewconfig_childtplmod'
