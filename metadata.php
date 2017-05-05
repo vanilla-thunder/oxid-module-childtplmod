@@ -18,7 +18,7 @@
 
 $sMetadataVersion = '1.1';
 $aModule = [
-    'id'          => 'vt-childtplmod',
+    'id'          => 'childtplmod',
     'title'       => '[vt] child theme for module templates',
     'description' => 'child themes can now override module tempaltes and blocks. No need to change module tempaltes and care about updates anymore!',
     'thumbnail'   => 'oxid-vt.jpg',
@@ -27,8 +27,8 @@ $aModule = [
     'email'       => 'm@marat.ws',
     'url'         => 'https://github.com/vanilla-thunder/vt-childtplmod',
     'extend'      => [
-        'oxutilsview' => 'vt/vt-childtplmod/extend/oxutilsview_childtplmod',
-        'oxviewconfig' => 'vt/vt-childtplmod/extend/oxviewconfig_childtplmod'
+        'oxutilsview' => 'vt/childtplmod/extend/oxutilsview_childtplmod',
+        'oxviewconfig' => 'vt/childtplmod/extend/oxviewconfig_childtplmod'
     ],
     'settings' => [
         ['group' => 'vtchildtplmod', 'name' => 'blVtctpmLogReplaced', 'type' => 'bool',  'value' => false],
