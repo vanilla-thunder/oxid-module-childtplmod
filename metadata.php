@@ -1,9 +1,10 @@
 <?php
 
 /*
- * ###_COMPANY_### - ###_MODULE_###
- * Copyright (C) ###_YEAR_###  ###_COMPANY_###
- * info:  ###_EMAIL_###
+ * [___VENDOR___] ___NAME___ for OXID eShop
+ * ___DESCRIPTION___
+ * Copyright (C) ___YEAR___ ___COMPANY___ ___AUTHOR___
+ * info:  ___EMAIL___
  *
  * GNU GENERAL PUBLIC LICENSE  
  *
@@ -18,17 +19,18 @@
 
 $sMetadataVersion = '1.1';
 $aModule = [
-    'id'          => 'vt-childtplmod',
+    'id'          => 'childtplmod',
     'title'       => '[vt] child theme for module templates',
-    'description' => 'child themes can now override module tempaltes and blocks. No need to change module tempaltes and care about updates anymore!',
-    'thumbnail'   => 'oxid-vt.jpg',
+    'description' => '___DESCRIPTION___',
+    'thumbnail'   => '../oxid-vt.jpg',
     'version'     => '___VERSION___',
     'author'      => '___AUTHOR___, ___COMPANY___',
     'email'       => '___EMAIL___',
     'url'         => '___URL___',
     'extend'      => [
-        'oxutilsview' => 'vt/vt-childtplmod/extend/oxutilsview_childtplmod',
-        'oxviewconfig' => 'vt/vt-childtplmod/extend/oxviewconfig_childtplmod'
+        'oxconfig' => 'vt/childtplmod/application/extend/oxconfig_childtplmod',
+        'oxutilsview' => 'vt/childtplmod/application/extend/oxutilsview_childtplmod',
+        'oxviewconfig' => 'vt/childtplmod/application/extend/oxviewconfig_childtplmod'
     ],
     'settings' => [
         ['group' => 'vtchildtplmod', 'name' => 'blVtctpmLogReplaced', 'type' => 'bool',  'value' => false],

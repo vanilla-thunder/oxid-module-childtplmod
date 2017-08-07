@@ -1,15 +1,5 @@
-var runner = require('child_process');
-
-var shell = function (command) {
-    runner.exec(command,
-        function (err, stdout, stderr) {
-            //if (err) console.log(err);
-            //if (stderr) console.log(stderr);
-        }
-    );
-};
-
-var msg = ( process.argv[2] ? process.argv[2] : "updates");
+var runner = require('child_process'),
+    msg = ( process.argv[2] ? process.argv[2] : "updates");
     
 runner.exec("git add . && git commit -m '"+msg+"' && git push", {cwd: './_master/'},
     function (err, stdout, stderr) {

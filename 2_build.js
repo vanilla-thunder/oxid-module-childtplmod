@@ -1,5 +1,5 @@
 var fs = require('fs'),
-    p = require('./package.json'),
+    oxmodule = require('./package.json'),
     replace = require('replace'),
     runner = require('child_process');
 
@@ -14,18 +14,14 @@ var shell = function (command) {
 };
 
 // cleanup
-shell("rm -rf _module/application");
-shell("rm -rf _module/extend");
-shell("rm -rf _master/copy_this/modules/vt/vt-childtplmod");
+shell("rm -rf _module/*");
+shell("rm -rf _master/copy_this/modules/"+oxmodule.vendor+"/"+oxmodule.name);
 console.log("");
 console.log("     cleanup finished");
 
-// oxversion
-//shell('wget -O _module/version.jpg http://mb-dev.de/v/?raw=1&v=' + p.version);
 
 // copy files
-shell("cp -r application _module/");
-shell("cp -r extend _module/");
+shell("cp -r application _module/application");
 shell("cp metadata.php _module/metadata.php");
 shell("cp README.md _module/README.md");
 shell("cp LICENSE _module/LICENSE");
@@ -33,19 +29,22 @@ console.log("     new files copied");
 
 // compile some files
 var replaces = {
-    'MODULE': p.description,
-    'VERSION': p.version,
-    'AUTHOR': p.author,
-    'COMPANY': p.company,
-    'EMAIL': p.email,
-    'URL': p.url,
+    'NAME': oxmodule.name,
+    'DESCRIPTION': oxmodule.description,
+    'VERSION': oxmodule.version+' '+new Date().toLocaleDateString(),
+    'AUTHOR': oxmodule.author,
+    'VENDOR': oxmodule.vendor,
+    'COMPANY': oxmodule.company,
+    'EMAIL': oxmodule.email,
+    'URL': oxmodule.url,
     'YEAR': new Date().getFullYear()
 };
+
 
 for(var x in replaces)
 {
     replace({
-        regex: "###_"+x+"_###",
+        regex: "___"+x+"___",
         replacement: replaces[x],
         paths: ['./_module'],
         recursive: true,
@@ -56,8 +55,8 @@ for(var x in replaces)
 process.on('exit', function (code) {
     console.log("     replacing complete");
     // copy module to master
-    shell("cp -rf _module _master/copy_this/modules/vt/vt-childtplmod");
-    shell("rm -rf _master/copy_this/modules/vt/vt-childtplmod/.git");
+    shell("cp -rf _module _master/copy_this/modules/"+oxmodule.vendor+"/"+oxmodule.name);
+    shell("rm -rf _master/copy_this/modules/"+oxmodule.vendor+"/"+oxmodule.name+"/.git");
     shell("cp _module/README.md _master/README.md");
     console.log("");
     console.log("     build complete! made my day!");

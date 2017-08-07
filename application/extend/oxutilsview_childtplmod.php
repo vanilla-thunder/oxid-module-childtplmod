@@ -1,9 +1,10 @@
 <?php
 
 /*
- * ###_COMPANY_### - ###_MODULE_###
- * Copyright (C) ###_YEAR_###  ###_COMPANY_###
- * info:  ###_EMAIL_###
+ * [___VENDOR___] ___NAME___ for OXID eShop
+ * ___DESCRIPTION___
+ * Copyright (C) ___YEAR___ ___COMPANY___ ___AUTHOR___
+ * info:  ___EMAIL___
  *
  * GNU GENERAL PUBLIC LICENSE  
  *
