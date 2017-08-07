@@ -1,8 +1,9 @@
 <?php
 
 /*
+ * [vt] childtplmod for OXID eShop
  * child theme implementation for module templates
- * Copyright (C) 2016  Marat Bedoev
+ * Copyright (C) 2017  Marat Bedoev
  * info:  m@marat.ws
  *
  * GNU GENERAL PUBLIC LICENSE  

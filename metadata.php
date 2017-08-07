@@ -1,8 +1,9 @@
 <?php
 
 /*
+ * [vt] childtplmod for OXID eShop
  * child theme implementation for module templates
- * Copyright (C) 2016  Marat Bedoev
+ * Copyright (C) 2017  Marat Bedoev
  * info:  m@marat.ws
  *
  * GNU GENERAL PUBLIC LICENSE  
@@ -20,15 +21,16 @@ $sMetadataVersion = '1.1';
 $aModule = [
     'id'          => 'childtplmod',
     'title'       => '[vt] child theme for module templates',
-    'description' => 'child themes can now override module tempaltes and blocks. No need to change module tempaltes and care about updates anymore!',
-    'thumbnail'   => 'oxid-vt.jpg',
-    'version'     => '0.1.0',
+    'description' => 'child theme implementation for module templates',
+    'thumbnail'   => '../oxid-vt.jpg',
+    'version'     => '0.2.1 2017-8-7',
     'author'      => 'Marat Bedoev, ',
     'email'       => 'm@marat.ws',
-    'url'         => 'https://github.com/vanilla-thunder/vt-childtplmod',
+    'url'         => 'https://github.com/vanilla-thunder/childtplmod',
     'extend'      => [
-        'oxutilsview' => 'vt/childtplmod/extend/oxutilsview_childtplmod',
-        'oxviewconfig' => 'vt/childtplmod/extend/oxviewconfig_childtplmod'
+        'oxconfig' => 'vt/childtplmod/application/extend/oxconfig_childtplmod',
+        'oxutilsview' => 'vt/childtplmod/application/extend/oxutilsview_childtplmod',
+        'oxviewconfig' => 'vt/childtplmod/application/extend/oxviewconfig_childtplmod'
     ],
     'settings' => [
         ['group' => 'vtchildtplmod', 'name' => 'blVtctpmLogReplaced', 'type' => 'bool',  'value' => false],
