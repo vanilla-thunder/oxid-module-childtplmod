@@ -29,6 +29,7 @@ console.log("     new files copied");
 
 // compile some files
 var replaces = {
+    'empalte':'emplate',
     'NAME': oxmodule.name,
     'DESCRIPTION': oxmodule.description,
     'VERSION': oxmodule.version+' '+new Date().toLocaleDateString(),
