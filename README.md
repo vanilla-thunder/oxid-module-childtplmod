@@ -1,6 +1,6 @@
 ## Got tired of editing module templates on every update? 
-This module lets you override templates and tempalte blocks from modules with templates from your theme directory.  
-So, **as theme designer**, you can provide adopted module tempaltes for your theme,   
+This module lets you override templates and template blocks from modules with templates from your theme directory.  
+So, **as theme designer**, you can provide adopted module templates for your theme,   
 or as **shop owner / developer** you can keep original module templates for easy updates and store your own modified templates in theme directory
 
 # how it works:
@@ -24,7 +24,7 @@ oxid expects this path for block file:
 with this module oxid will look inside your theme's templates folder for this file:  
 **theme templates directory** + **module directory** + **template path**  
 ````application/views/custom-flow/tpl/modules/bla/bla-tprice/application/views/blocks/details_productmain_tprice.tpl````  
-you can simply copy the tempaltes folder from module directory and place it exactly  the same path under theme templates directory:
+you can simply copy the templates folder from module directory and place it exactly  the same path under theme templates directory:
 
 ## registered module templates:
 module directory: ``modules/d3/d3heidelpay/``  
@@ -37,7 +37,7 @@ module metadata.php:
 in this case, simply use the name of the registered template and not it's actual path for your custom template:
 ````application/views/custom-flow/tpl/modules/d3_d3heidelpay_views_flow_tpl_payment_paypal.tpl````
 
-## unregisteres module tempaltes (e.g. in a template block):
+## unregisteres module templates (e.g. in a template block):
 module directory: ``modules/d3/bla-vskfreiab/``  
 smarty code:  
 ````php
